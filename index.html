@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahsan | Junior Web Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="logo">
+        <span class="logo__icon">&lt;/&gt;</span> Ahsan Khatri
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="#contact" class="btn btn--primary btn--pill nav-cta">
+        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+          <path d="M22 2 11 13" />
+          <path d="M22 2 15 22l-4-9-9-4 20-7Z" />
+        </svg>
+        Get In Touch
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge reveal reveal--left" style="--delay: 0">
+            <span class="badge__dot"></span> Junior Web Developer
+          </span>
+
+          <h1 class="hero__title reveal reveal--left" style="--delay: 1">
+            Hi, I'm <span class="highlight">Ahsan</span>
+          </h1>
+
+          <p class="hero__subtitle reveal reveal--left" style="--delay: 2">
+            I build and maintain websites, with a focus on
+            WordPress, Shopify and modern web technologies.
+          </p>
+
+          <p class="hero__desc reveal reveal--left" style="--delay: 3">
+            Currently working at <span class="accent">SuperTechLEDs</span>, where I help keep their
+            website running smoothly and contribute to its growth.
+            I'm passionate about web development and always eager to
+            learn, improve and take on new challenges.
+          </p>
+
+          <div class="hero__actions reveal reveal--left" style="--delay: 4">
+            <a href="#contact" class="btn btn--primary">
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                <path d="M4 4h16v16H4z" opacity="0" />
+                <path d="M22 6 12 13 2 6" />
+                <path d="M2 6h20v12H2z" />
+              </svg>
+              Get In Touch
+            </a>
+            <a
+              href="assets/CV/Ahsan - Resume.pdf"
+              class="btn btn--outline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                <path d="M12 3v12" />
+                <path d="m7 10 5 5 5-5" />
+                <path d="M5 21h14" />
+              </svg>
+              Download CV
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal reveal--right" style="--delay: 2">
+          <div class="hero__frame">
+            <img
+              src="assets/Images/Hero-Section-img.png"
+              alt="Portrait of Ahsan, junior web developer"
+              class="hero__img"
+            />
+
+            <span class="scribble scribble--1">Better<br />Websites</span>
+            <span class="scribble scribble--2">Bigger<br />Goals</span>
+
+            <div class="floating-card floating-card--1">
+              <span class="floating-card__dot"></span> Available for work
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about__inner">
+        <div class="about__top">
+          <div class="about__intro">
+            <span class="section-label reveal-onscroll" data-anim="left">01 — About</span>
+            <h2 class="about__heading reveal-onscroll" data-anim="left" style="--sd: 1">
+              A developer who<br />likes to improve.
+            </h2>
+          </div>
+        </div>
+
+        <div class="about__cards">
+          <article class="about-card tilt-card reveal-onscroll" data-anim="up" style="--sd: 0">
+            <div class="tilt-card__inner">
+              <blockquote class="about__quote">
+                “Keep learning.<br />
+                <span class="accent">Keep building.</span><br />
+                Keep improving.”
+              </blockquote>
+              <p class="about__goal">
+                My goal is simple: become a stronger developer by working
+                on real websites, solving real problems and learning
+                something new every day.
+              </p>
+            </div>
+          </article>
+
+          <article class="about-card tilt-card reveal-onscroll" data-anim="up" style="--sd: 1.5">
+            <div class="tilt-card__inner">
+              <span class="section-label">What I Do</span>
+              <h3 class="about__subheading">From maintenance to new ideas.</h3>
+              <p class="about__text">
+                I work with website content, layouts, responsive styling,
+                product updates, forms, performance improvements and
+                frontend changes. I'm especially interested in creating
+                interfaces that feel simple and polished.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="container skills__inner">
+        <div class="skills__top">
+          <div class="skills__intro">
+            <span class="section-label reveal-onscroll" data-anim="left">02 — Skills</span>
+            <h2 class="skills__heading reveal-onscroll" data-anim="left" style="--sd: 1">My toolkit.</h2>
+          </div>
+        </div>
+
+        <div class="skills__grid">
+          <article class="skill-card" style="--i: 0">
+            <span class="skill-card__icon">H</span>
+            <h3 class="skill-card__title">HTML</h3>
+            <p class="skill-card__desc">Structure &amp; semantic markup</p>
+          </article>
+
+          <article class="skill-card" style="--i: 1">
+            <span class="skill-card__icon">C</span>
+            <h3 class="skill-card__title">CSS</h3>
+            <p class="skill-card__desc">Responsive layouts &amp; styling</p>
+          </article>
+
+          <article class="skill-card" style="--i: 2">
+            <span class="skill-card__icon">J</span>
+            <h3 class="skill-card__title">JavaScript</h3>
+            <p class="skill-card__desc">Frontend interactions</p>
+          </article>
+
+          <article class="skill-card" style="--i: 3">
+            <span class="skill-card__icon">W</span>
+            <h3 class="skill-card__title">WordPress</h3>
+            <p class="skill-card__desc">Elementor &amp; website management</p>
+          </article>
+
+          <article class="skill-card" style="--i: 4">
+            <span class="skill-card__icon">S</span>
+            <h3 class="skill-card__title">Shopify</h3>
+            <p class="skill-card__desc">Store &amp; product management</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="container experience__top">
+        <div class="experience__intro">
+          <span class="section-label reveal-onscroll" data-anim="left">03 — Experience</span>
+          <h2 class="experience__heading reveal-onscroll" data-anim="left" style="--sd: 1">
+            Real work.<br />Real learning.
+          </h2>
+        </div>
+      </div>
+
+      <div class="experience__scroller">
+        <div class="experience__sticky">
+          <div class="container experience__grid">
+            <div class="experience__card reveal-onscroll" data-anim="left">
+              <span class="experience__eyebrow">Current Role</span>
+              <h3 class="experience__role">Junior Web Developer</h3>
+              <p class="experience__company">SuperTechLEDs</p>
+              <p class="experience__tags">Website maintenance &middot; Frontend &middot; Content &middot; E-commerce</p>
+
+              <div class="experience__divider" aria-hidden="true"></div>
+
+              <span class="experience__focus-title">Currently Focused On</span>
+              <ul class="experience__focus-list">
+                <li>Improving page speed and overall site performance</li>
+                <li>Sharpening JavaScript and modern frontend skills</li>
+                <li>Contributing to e-commerce features on real store traffic</li>
+              </ul>
+
+              <a class="experience__cta" href="#contact">
+                Let's work together
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                  <path d="M7 17 17 7" />
+                  <path d="M7 7h10v10" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="experience__steps">
+              <div class="step" data-step="1">
+                <span class="step__num">01</span>
+                <div class="step__body">
+                  <h4 class="step__title">Website Maintenance</h4>
+                  <p class="step__desc">Keeping pages, products, content and layouts updated.</p>
+                </div>
+                <svg class="step__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 17 17 7" />
+                  <path d="M7 7h10v10" />
+                </svg>
+              </div>
+
+              <div class="step" data-step="2">
+                <span class="step__num">02</span>
+                <div class="step__body">
+                  <h4 class="step__title">UI &amp; Layout Improvements</h4>
+                  <p class="step__desc">Improving sections, responsive behavior and overall presentation.</p>
+                </div>
+                <svg class="step__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 17 17 7" />
+                  <path d="M7 7h10v10" />
+                </svg>
+              </div>
+
+              <div class="step" data-step="3">
+                <span class="step__num">03</span>
+                <div class="step__body">
+                  <h4 class="step__title">Quality &amp; Performance</h4>
+                  <p class="step__desc">Checking pages, spotting issues and helping improve website quality.</p>
+                </div>
+                <svg class="step__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 17 17 7" />
+                  <path d="M7 7h10v10" />
+                </svg>
+              </div>
+
+              <div class="step" data-step="4">
+                <span class="step__num">04</span>
+                <div class="step__body">
+                  <h4 class="step__title">E-commerce Updates</h4>
+                  <p class="step__desc">Managing product information and online-store content.</p>
+                </div>
+                <svg class="step__arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 17 17 7" />
+                  <path d="M7 7h10v10" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="container projects__top">
+        <div class="projects__intro">
+          <span class="section-label reveal-onscroll" data-anim="left">04 — Selected Work</span>
+          <h2 class="projects__heading reveal-onscroll" data-anim="left" style="--sd: 1">
+            Things I've worked on.
+          </h2>
+        </div>
+      </div>
+
+      <div class="container projects__grid">
+        <article
+          class="project-card project-card--wide"
+          style="--i: 0; --sx: -180px; --sy: -70px; --srot: -18deg; z-index: 5"
+        >
+          <div class="project-card__thumb project-card__thumb--green">
+            <img
+              class="project-card__shot"
+              src="assets/Images/Supertechleds.png"
+              alt="Screenshot of the SuperTechLEDs website"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__meta">01 &middot; Live Website</span>
+            <h3 class="project-card__title">SuperTechLEDs</h3>
+            <p class="project-card__desc">
+              Ongoing website maintenance, product updates, UI improvements
+              and frontend work for an LED lighting business.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">Elementor</span>
+              <span class="tag">CSS</span>
+              <span class="tag">E-commerce</span>
+            </div>
+            <a
+              class="project-card__link"
+              href="https://supertechleds.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Site
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                <path d="M7 17 17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" style="--i: 1; --sx: 200px; --sy: -85px; --srot: 20deg; z-index: 4">
+          <div class="project-card__thumb project-card__thumb--blue">
+            <img
+              class="project-card__shot"
+              src="assets/Images/Supertechlights.png"
+              alt="Screenshot of the SuperTech Lights Shopify store"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__meta">02 &middot; E-commerce</span>
+            <h3 class="project-card__title">Shopify Store</h3>
+            <p class="project-card__desc">
+              Product management, store updates and keeping large product
+              catalogs organized.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Shopify</span>
+              <span class="tag">Products</span>
+            </div>
+            <a
+              class="project-card__link"
+              href="https://supertechlights.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Site
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                <path d="M7 17 17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" style="--i: 2; --sx: -190px; --sy: 110px; --srot: 16deg; z-index: 3">
+          <div class="project-card__thumb project-card__thumb--orange">
+            <img
+              class="project-card__shot"
+              src="assets/Images/tic-tac-toe.png"
+              alt="Screenshot of the Tic-Tac-Toe Game"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__meta">03 &middot; Mini Game</span>
+            <h3 class="project-card__title">Tic-Tac-Toe Game</h3>
+            <p class="project-card__desc">
+              A browser-based Tic-Tac-Toe game built from scratch to
+              practice DOM manipulation and game-state logic in vanilla
+              JavaScript.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a
+              class="project-card__link"
+              href="https://helios12345x.github.io/Tic-Tac-Toe-Game/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try It Live
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                <path d="M7 17 17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" style="--i: 3; --sx: 150px; --sy: 130px; --srot: -22deg; z-index: 2">
+          <div class="project-card__thumb project-card__thumb--purple">
+            <img
+              class="project-card__shot"
+              src="assets/Images/weather-app.png"
+              alt="Screenshot of the Weather App Project"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__meta">04 &middot; Web App</span>
+            <h3 class="project-card__title">Weather App Project</h3>
+            <p class="project-card__desc">
+              A weather lookup app that fetches live conditions and
+              displays them in a clean, responsive frontend interface.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a
+              class="project-card__link"
+              href="https://helios12345x.github.io/Weather-App-Project/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try It Live
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                <path d="M7 17 17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" style="--i: 4; --sx: 0px; --sy: 160px; --srot: 10deg; z-index: 1">
+          <div class="project-card__thumb project-card__thumb--teal">
+            <img
+              class="project-card__shot"
+              src="assets/Images/Calculator.png"
+              alt="Screenshot of the Calculator app"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__meta">05 &middot; Utility App</span>
+            <h3 class="project-card__title">Calculator</h3>
+            <p class="project-card__desc">
+              A simple, functional calculator built with vanilla
+              JavaScript to practice logic handling and clean UI
+              interactions.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a
+              class="project-card__link"
+              href="https://helios12345x.github.io/Calculator/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try It Live
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                <path d="M7 17 17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact__card reveal-onscroll" data-anim="up">
+          <span class="section-label contact__label">05 — Contact</span>
+          <h2 class="contact__heading">
+            Let's build something <span class="highlight">better.</span>
+          </h2>
+          <p class="contact__lead">
+            I'm passionate about growing as a developer and open to
+            opportunities where I can learn, contribute and build great
+            web experiences.
+          </p>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="contact-form__row">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+                <span class="form-field__error" data-error-for="name"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                <span class="form-field__error" data-error-for="email"></span>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell me a bit about the project or opportunity..."
+                required
+              ></textarea>
+              <span class="form-field__error" data-error-for="message"></span>
+            </div>
+
+            <div class="contact-form__footer">
+              <button type="submit" class="btn btn--primary btn--pill contact-form__submit">
+                Send Message
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                  <path d="M22 2 11 13" />
+                  <path d="M22 2 15 22l-4-9-9-4 20-7Z" />
+                </svg>
+              </button>
+
+              <p class="contact-form__status" id="contactStatus" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
