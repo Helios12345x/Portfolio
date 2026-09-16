@@ -21,6 +21,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -1315,7 +1317,15 @@ img {
     justify-content: center;
   }
 
+  .hero {
+    min-height: auto;
+  }
+
   .hero__visual {
+    display: none;
+  }
+
+  .scroll-indicator {
     display: none;
   }
 
