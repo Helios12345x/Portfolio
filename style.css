@@ -21,7 +21,11 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: clip (not hidden) avoids a CSS quirk where setting only
+     one overflow axis silently forces the other axis to "auto", which
+     would turn html/body into their own scroll containers and break
+     window-level scroll listeners (like the Experience pin animation). */
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -30,7 +34,7 @@ body {
   color: var(--text);
   font-family: var(--font-body);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
