@@ -114,6 +114,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (experienceScroller && experienceSteps.length) {
     sizeExperienceScroller();
+
+    // Re-measure once web fonts (and any late-loading images) have settled —
+    // text measured with a fallback font can be a different height than the
+    // final custom font, which would otherwise leave the scroller's locked-in
+    // height mismatched with the real content and show up as a dead gap.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => {
+        sizeExperienceScroller();
+        requestExperienceUpdate();
+      });
+    }
+    window.addEventListener("load", () => {
+      sizeExperienceScroller();
+      requestExperienceUpdate();
+    });
+
     window.addEventListener("scroll", requestExperienceUpdate, { passive: true });
 
     // Mobile browsers fire "resize" mid-scroll when their address bar
