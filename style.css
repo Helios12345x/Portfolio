@@ -1337,6 +1337,10 @@ img {
     display: none;
   }
 
+  .about__top {
+    text-align: center;
+  }
+
   .about__cards {
     grid-template-columns: 1fr;
   }
