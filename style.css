@@ -1345,6 +1345,10 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .skills__top {
+    text-align: center;
+  }
+
   .skills__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1358,6 +1362,10 @@ img {
     padding-bottom: 60px;
   }
 
+  .experience__top {
+    text-align: center;
+  }
+
   .experience__grid {
     grid-template-columns: 1fr;
   }
@@ -1369,6 +1377,10 @@ img {
 
   .step.active {
     transform: none;
+  }
+
+  .projects__top {
+    text-align: center;
   }
 
   .projects__grid {
