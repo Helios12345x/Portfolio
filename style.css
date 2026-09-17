@@ -671,6 +671,14 @@ img {
   color: var(--green);
   font-size: 1rem;
   font-weight: 800;
+  /* Visible by default — the pop-in below is a bonus flourish, not a
+     requirement, so the icon never depends on an animation actually
+     firing to be seen (some mobile browsers can silently skip it). */
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.skill-card:not(.is-visible) .skill-card__icon {
   opacity: 0;
   transform: scale(0.4) rotate(-15deg);
 }
