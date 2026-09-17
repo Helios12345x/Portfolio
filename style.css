@@ -507,6 +507,10 @@ img {
   justify-content: space-between;
   transform-style: preserve-3d;
   transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.03s linear;
+  /* Pre-promote both cards to their own GPU layer immediately, instead of
+     only whichever one is hovered first — otherwise the second card to be
+     hovered pays a one-time layer-creation cost that shows up as lag. */
+  will-change: transform;
 }
 
 .about-card:hover {
