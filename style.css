@@ -1357,6 +1357,19 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .about__quote {
+    font-size: 1.7rem;
+  }
+
+  .about__goal,
+  .about__text {
+    font-size: 1.05rem;
+  }
+
+  .about__subheading {
+    font-size: 1.85rem;
+  }
+
   .skills__top {
     text-align: center;
   }
