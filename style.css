@@ -1399,6 +1399,19 @@ img {
     grid-column: span 1;
   }
 
+  /* Unify horizontal card padding across sections so text starts at the
+     same depth everywhere on mobile, instead of each card type using its
+     own left/right padding value. */
+  .about-card,
+  .experience__card,
+  .step {
+    padding: 28px 24px;
+  }
+
+  .project-card__body {
+    padding: 10px 24px 20px;
+  }
+
   .contact__card {
     padding: 44px 24px;
   }
