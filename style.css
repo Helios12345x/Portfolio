@@ -723,7 +723,7 @@ img {
 /* Pinned scroll-steps */
 .experience__scroller {
   position: relative;
-  height: 260vh;
+  height: 300vh;
 }
 
 .experience__sticky {
@@ -1347,7 +1347,6 @@ img {
 
   .experience__sticky {
     position: static;
-    min-height: 0;
     padding-bottom: 60px;
   }
 

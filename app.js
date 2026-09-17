@@ -57,26 +57,15 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener("pointerleave", resetTilt);
   });
 
-  /* ---- Pinned scroll-steps for Experience section ---- */
+  /* ---- Pinned scroll-steps for Experience section ----
+     .experience__scroller has a plain, fixed CSS height (see style.css) —
+     nothing here measures or mutates it. That height is the single source
+     of truth for both the CSS position:sticky pin and the progress math
+     below, so the two can never disagree with each other. */
   const experienceScroller = document.querySelector(".experience__scroller");
-  const experienceSticky = document.querySelector(".experience__sticky");
   const experienceSteps = document.querySelectorAll(".experience__steps .step");
   const PIN_ENABLED_QUERY = "(min-width: 961px)";
-  const STEP_SCROLL_DISTANCE = 420; // px of scroll dedicated to each step
   let experienceTicking = false;
-
-  const sizeExperienceScroller = () => {
-    if (!experienceScroller || !experienceSticky || !experienceSteps.length) return;
-
-    if (!window.matchMedia(PIN_ENABLED_QUERY).matches) {
-      experienceScroller.style.height = "";
-      return;
-    }
-
-    const stickyHeight = experienceSticky.getBoundingClientRect().height;
-    const totalHeight = stickyHeight + experienceSteps.length * STEP_SCROLL_DISTANCE;
-    experienceScroller.style.height = `${totalHeight}px`;
-  };
 
   const updateExperienceSteps = () => {
     experienceTicking = false;
@@ -113,37 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   if (experienceScroller && experienceSteps.length) {
-    sizeExperienceScroller();
-
-    // Re-measure once web fonts (and any late-loading images) have settled —
-    // text measured with a fallback font can be a different height than the
-    // final custom font, which would otherwise leave the scroller's locked-in
-    // height mismatched with the real content and show up as a dead gap.
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(() => {
-        sizeExperienceScroller();
-        requestExperienceUpdate();
-      });
-    }
-    window.addEventListener("load", () => {
-      sizeExperienceScroller();
-      requestExperienceUpdate();
-    });
-
     window.addEventListener("scroll", requestExperienceUpdate, { passive: true });
-
-    // Mobile browsers fire "resize" mid-scroll when their address bar
-    // hides/shows (height-only change). Recalculating the scroller height
-    // at that moment shifts the whole page and looks like a jump, so only
-    // resize when the viewport width actually changes (real resize/rotate).
-    let lastViewportWidth = window.innerWidth;
-    window.addEventListener("resize", () => {
-      if (window.innerWidth === lastViewportWidth) return;
-      lastViewportWidth = window.innerWidth;
-      sizeExperienceScroller();
-      requestExperienceUpdate();
-    });
-
+    window.addEventListener("resize", requestExperienceUpdate);
     updateExperienceSteps();
   }
 
